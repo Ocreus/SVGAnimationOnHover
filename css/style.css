@@ -1,0 +1,211 @@
+@-webkit-keyframes moonDis {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    fill: whitesmoke;
+    -webkit-transform: translate(-65%, 0);
+            transform: translate(-65%, 0);
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    fill: yellow;
+    stroke: rgba(255, 255, 0, 0.125);
+    stroke-width: 5px;
+  }
+}
+
+@keyframes moonDis {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    fill: whitesmoke;
+    -webkit-transform: translate(-65%, 0);
+            transform: translate(-65%, 0);
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    fill: yellow;
+    stroke: rgba(255, 255, 0, 0.125);
+    stroke-width: 5px;
+  }
+}
+
+@-webkit-keyframes bg {
+  from {
+    fill: black;
+  }
+  to {
+    fill: pink;
+  }
+}
+
+@keyframes bg {
+  from {
+    fill: black;
+  }
+  to {
+    fill: pink;
+  }
+}
+
+@-webkit-keyframes clouds {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes clouds {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textHidden {
+  from {
+    color: black;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: pink;
+  }
+}
+
+@keyframes textHidden {
+  from {
+    color: black;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: pink;
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-two {
+  padding-top: 2rem;
+  background: whitesmoke;
+  width: 100%;
+  height: 500px;
+  background: black;
+  -webkit-transition: background .5s ease-in;
+  transition: background .5s ease-in;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-two::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 5rem solid transparent;
+  border-bottom-color: black;
+  -webkit-transform: translate(0px, -350px);
+          transform: translate(0px, -350px);
+  -webkit-transition: border-bottom-color .5s ease-in;
+  transition: border-bottom-color .5s ease-in;
+}
+
+.section-two:hover {
+  background: whitesmoke;
+}
+
+.section-two:hover .moon {
+  -webkit-animation: moonDis 4s ease-in-out  normal forwards;
+          animation: moonDis 4s ease-in-out  normal forwards;
+}
+
+.section-two:hover .cloud1, .section-two:hover .cloud2 {
+  -webkit-animation: clouds 4s ease-in-out  normal forwards;
+          animation: clouds 4s ease-in-out  normal forwards;
+}
+
+.section-two:hover .bg {
+  -webkit-animation: bg 4s ease-in-out  normal forwards;
+          animation: bg 4s ease-in-out  normal forwards;
+}
+
+.section-two:hover::before {
+  border-bottom-color: whitesmoke;
+}
+
+.section-two:hover h1 {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: textHidden 1s ease-in-out forwards;
+          animation: textHidden 1s ease-in-out forwards;
+}
+
+.section-two__svg {
+  border: 3px dashed black;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+}
+
+.bg {
+  fill: black;
+}
+
+.cloud1, .cloud2 {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */
