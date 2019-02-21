@@ -1,0 +1,7 @@
+Just a simple animation. If someone hover over it, it will change the fill of the moon and 
+simulate the movement of the sun(arise east and to west).
+
+And there are two clouds that will change the opacity from 0 to 1 over the time.
+
+The paragraph is just a example for a use case. To hide the text first, then show it to the user. To make it a little more
+interactive.
